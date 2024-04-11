@@ -1,0 +1,40 @@
+﻿<Window x:Class="Seva.Connected"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Seva"
+        mc:Ignorable="d"
+        Title="Connected" Height="450" Width="237" ResizeMode="NoResize" Background="#2A2A2A" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button BorderThickness="0" Background="#2A2A2A" Foreground="White" Width="40" Margin="0,0,0,0" >
+                <Image  Width="10" Height="10" Source="/min.png" />
+            </Button>
+            <Button BorderThickness="0" Background="#2A2A2A" Foreground="White" Width="40" Click="Button_Click">
+                <Image Source="/exit.png" Width="10" Height="10" />
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="1">
+            <Label FontSize="20" Content="Connection" Margin="0 5 5 1" Foreground="White"/>
+            <Label FontSize="17" Content="Server" Margin="0 5 5 1" Foreground="White"/>
+            <TextBox x:Name="Server" MaxLength="64" Width="180" Foreground="White" Background="Transparent" BorderThickness="0,0,0,1"/>
+            <Label FontSize="17" Content="Port" Margin="0 5 5 1" Foreground="White"/>
+            <TextBox x:Name="Port" MaxLength="64" Width="180" Foreground="White" Background="Transparent" BorderThickness="0,0,0,1"/>
+            <Label FontSize="17" Content="Username" Margin="0 5 5 1" Foreground="White"/>
+            <TextBox x:Name="UserName" MaxLength="64" Width="180" Foreground="White" Background="Transparent" BorderThickness="0,0,0,1"/>
+            <Label FontSize="17" Content="Password" Margin="0 5 5 1" Foreground="White"/>
+            <TextBox x:Name="Password" MaxLength="64" Width="180" Foreground="White" Background="Transparent" BorderThickness="0,0,0,1"/>
+            <Label FontSize="17" Content="Database" Margin="0 5 5 1" Foreground="White"/>
+            <TextBox x:Name="DataBase" MaxLength="64" Width="180" Margin="0,0,0,10" Foreground="White" Background="Transparent" BorderThickness="0,0,0,1"/>
+            <Button Content="Connection" FontSize="17" Name="Connect" Click="Connect_Click" Foreground="White" Background="#4A4A4A" BorderThickness="0"/>
+            <Button Content="Remote connection?" FontSize="17" Name="remoteConnect" Click="remoteConnect_Click" Foreground="White" Background="#4A4A4A" BorderThickness="0" Margin="0,10,0,0"/>
+
+        </StackPanel>
+        
+    </Grid>
+</Window>
